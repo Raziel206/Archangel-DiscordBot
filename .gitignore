@@ -1,0 +1,8 @@
+# Ignore node modules
+
+node_modules/
+
+#Ignore config files
+
+discloud.config
+src/config.json

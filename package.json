@@ -1,0 +1,18 @@
+{
+  "name": "archangel",
+  "version": "1.0.0",
+  "description": "A discord bot (my first serious try)",
+  "main": "src/Bot.js",
+  "scripts": {
+    "test": "node ."
+  },
+  "author": "Devayudh Chatterjee",
+  "license": "ISC",
+  "dependencies": {
+    "@google/genai": "^1.17.0",
+    "discord.js": "^14.22.1",
+    "dotenv": "^16.3.1",
+    "node": "^20.19.5",
+    "openai": "^5.19.1"
+  }
+}
