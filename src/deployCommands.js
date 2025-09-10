@@ -33,7 +33,12 @@ const rest = new REST().setToken(token);
 
         const data= rest.put(Routes.applicationGuildCommands(clientId,guildId),{ body : commands});
 
-		// const data= rest.put(Routes.applicationGuildCommands(clientId,guildId),{ body : []});
+		// const data= rest.put(Routes.applicationCommands(clientId),{ body : commands}); // For global commands
+
+		// const data= rest.put(Routes.applicationGuildCommands(clientId,guildId),{ body : []}); // To delete all guild 
+		
+		// const data= rest.put(Routes.applicationCommands(clientId),{ body : []}); // To delete all global commands
+		
         console.log(`Successfully reloaded ${data.length} application (/) commands.`);
 
 	} catch (error) {
