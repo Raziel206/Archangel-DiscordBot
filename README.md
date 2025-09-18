@@ -30,6 +30,7 @@ It’s designed for **moderation, utility, and interactive fun**, with a clean m
   - `timer` — Set timers
   - `translate` — Translate text
   - `userinfo` — Display detailed info on a user
+  - `welcome`  — Sets the welcome message for a server 
 
 - **User Interactive Commands**  
   - `hug`        — Hug another user
