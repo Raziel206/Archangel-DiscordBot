@@ -6,6 +6,7 @@ const {
     ButtonBuilder,
     ButtonStyle,
     ComponentType,
+    PermissionsBitField,
     ChannelType,
     MessageFlags
 } = require('discord.js');
