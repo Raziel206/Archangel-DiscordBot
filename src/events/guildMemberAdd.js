@@ -7,6 +7,7 @@ module.exports = {
     name: Events.GuildMemberAdd,
     async execute(member) {
         try{
+            console.log(`${member.user.tag} joined the ${member.guild.name} server.`);
             let data = {};
             if (fs.existsSync(filePath)) {
                 const file=fs.readFileSync(filePath,"utf8");
