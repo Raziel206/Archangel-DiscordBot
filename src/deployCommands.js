@@ -31,11 +31,11 @@ const rest = new REST().setToken(token);
 	try {
 		console.log(`Started refreshing ${commands.length} application (/) commands.`);
 
-        const data= rest.put(Routes.applicationGuildCommands(clientId,guildId),{ body : commands});
+        // const data= rest.put(Routes.applicationGuildCommands(clientId,guildId),{ body : commands});// For guild specific commands
 
-		// const data= rest.put(Routes.applicationCommands(clientId),{ body : commands}); // For global commands
+		const data= rest.put(Routes.applicationCommands(clientId),{ body : commands}); // For global commands
 
-		// const data= rest.put(Routes.applicationGuildCommands(clientId,guildId),{ body : []}); // To delete all guild 
+		// const data= rest.put(Routes.applicationGuildCommands(clientId,guildId),{ body : []}); // To delete all guild commands
 		
 		// const data= rest.put(Routes.applicationCommands(clientId),{ body : []}); // To delete all global commands
 		

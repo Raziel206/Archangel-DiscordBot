@@ -7,7 +7,7 @@ module.exports = {
     name: Events.GuildMemberAdd,
     async execute(member) {
         try{
-            console.log(`${member.user.tag} joined the ${member.guild.name} server.`);
+            console.log(`${member.user.username} joined the ${member.guild.name} server.`);
             let data = {};
             if (fs.existsSync(filePath)) {
                 const file=fs.readFileSync(filePath,"utf8");
@@ -17,7 +17,10 @@ module.exports = {
             const guildId = member.guild.id;
             if (!data[guildId] || !data[guildId].enabled || !data[guildId].channel) return; 
             const channel = member.guild.channels.cache.get(data[guildId].channel);
-            if (!channel) return;
+            if (!channel){
+                console.log(`Channel with ID ${data[guildId].channel} not found in guild ${member.guild.name}.`);
+                return;
+            }
             const description = data[guildId].description || "";
             const color = data[guildId].color || "#87CEEB";
     
